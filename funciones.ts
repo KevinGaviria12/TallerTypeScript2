@@ -50,3 +50,52 @@ const saludar = (): void => {  // no recibe ningun argumento
 saludar();
 
 
+/**Cree una función flecha que tenga como parámetro edad y retorne un string que le diga al usuario cuál
+fue la edad pasada como argumento, imprima el valor devuelto por la función. Use paréntesis para el
+parámetro y omita la palabra reservada return.
+ */
+const mostrarEdad = (edad: number): string => `Su edad es: ${edad}`;
+console.log(mostrarEdad(21));
+
+/**Cree una función flecha que tenga como parámetros dos números y retorne el producto de éstos,
+imprima el valor devuelto por la función. Use paréntesis para agrupar los parámetros, no use la palabra
+reservada return.
+ */
+
+const mostrarProducto = (a: number, b: number): number => (a * b);
+console.log(mostrarProducto(19, 10));
+
+/**Cree una función flecha que tenga como parámetros dos números y retorne el módulo de éstos, imprima
+el valor devuelto por la función. La función debe tener dos instrucciones, una donde se declare e inicialice
+la variable módulo que contendrá el módulo de los dos números y la otra donde se retorne la variable
+módulo. Use paréntesis para agrupar los parámetros, use llaves para agrupar las dos instrucciones.
+*/
+
+// La función mostrarModulo calcula el residuo (módulo) de dividir a entre b
+const mostrarModulo = (a: number, b: number): number => {
+	const modulo = a % b; // El operador % obtiene el residuo de la división
+	return modulo;
+};
+console.log(mostrarModulo(4, 12));
+
+
+// Ejemplo 1: Desestructuración de un objeto
+const persona = { nombre: "Kevin Burgos", edad: 21, ciudad: "Armenia" };
+// Extraemos las propiedades nombre y ciudad del objeto persona
+const { nombre, ciudad } = persona;
+console.log(`Nombre: ${nombre}, Ciudad: ${ciudad}`); // Nombre: Kevin Burgos, Ciudad: Armenia
+
+
+// Ejemplo 2: Desestructuración de un arreglo
+const numeros = [10, 20, 30, 40];
+// Extraemos los dos primeros valores del arreglo
+const [primero, segundo] = numeros;
+console.log(`Primer número: ${primero}, Segundo número: ${segundo}`); // Primer número: 10, Segundo número: 20
+
+
+// Ejemplo 3: Desestructuración en parámetros de función
+const mostrarInfo = ({ nombre, edad }: { nombre: string, edad: number }) => {
+	console.log(`Nombre: ${nombre}, Edad: ${edad}`);
+};
+mostrarInfo({ nombre: "Carlos", edad: 30 }); // Nombre: Carlos, Edad: 30
+
