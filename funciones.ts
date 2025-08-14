@@ -5,24 +5,26 @@
 // 'flag' es un parámetro opcional de tipo boolean (puede ser true, false o no enviarse).
 // 'flag' normalmente se usa para indicar una condición, por ejemplo: activar/desactivar algo, mostrar/ocultar, etc.
 
-function ejemplo(num: number, texto: string = "por defecto", flag?: boolean): void {
-	// Muestra el número recibido
-	console.log("Número:", num);
-	// Muestra el texto recibido o el valor por defecto
-	console.log("Texto:", texto);
-	// Si se proporciona 'flag', muestra su valor; si no, indica que no fue proporcionado
-	if (flag !== undefined) {
-		console.log("Flag:", flag);
+function mostrarInfoProducto(nombre: string, precio: number = 100, disponible?: boolean): void {
+	// Muestra el nombre del producto
+	console.log("Nombre del producto:", nombre);
+	// Muestra el precio recibido o el valor por defecto
+	console.log("Precio:", precio);
+	// Si se proporciona 'disponible', muestra su valor; si no, indica que no se sabe
+	if (disponible !== undefined) {
+		if (disponible) {
+			console.log("El producto está disponible");
+		} else {
+			console.log("El producto NO está disponible");
+		}
 	} else {
-		console.log("Flag no proporcionado");
+		console.log("Disponibilidad desconocida");
 	}
 }
 
-ejemplo(5);
-// Número y texto (flag no se envía)
-ejemplo(10, "Hola");
-// Número, texto y flag (flag se envía como true)
-ejemplo(20, "Test", true);
+mostrarInfoProducto("Camiseta");
+mostrarInfoProducto("Zapatos", 250);
+mostrarInfoProducto("Gorra", 80, true);
 
 
 /*Cree una variable tipo función que tenga como parámetros dos números y retorne su suma, haga el
