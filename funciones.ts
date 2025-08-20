@@ -1,9 +1,6 @@
 
-// Función con un parámetro obligatorio (number), uno por defecto (string) y uno opcional (boolean)
-
-// 'texto' es un string que tiene un valor por defecto ("por defecto") si no se proporciona.
-// 'flag' es un parámetro opcional de tipo boolean (puede ser true, false o no enviarse).
-// 'flag' normalmente se usa para indicar una condición, por ejemplo: activar/desactivar algo, mostrar/ocultar, etc.
+/*Cree una función con un paraḿetro opcional tipo boolean, uno por defecto tipo string, y uno obligatorio de
+tipo number. Haga el llamado a la función*/
 
 function mostrarInfoProducto(nombre: string, precio: number = 100, disponible?: boolean): void {
 	// Muestra el nombre del producto
